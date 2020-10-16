@@ -1,1 +1,0 @@
-print(como andamos)
