@@ -23,8 +23,8 @@ void catalogo::capturar(){
     cout << "Ingresar descripcion: " << endl;
     getline(cin, bufferDesc);
     string llave = hazLlave();
-    ofstream archivo("catalogo.txt");
-    archivo << llave.length() << llave << bufferNombre.length() << bufferNombre << bufferDesc.length() << bufferDesc << "\n";
+    ofstream archivo("catalogo.txt", ios::app);
+    archivo << llave.length() << " " << llave << " " << bufferNombre.length()<< " " << bufferNombre << " " << bufferDesc.length() << " "<< bufferDesc << "\n";
     archivo.close();
 }
 
